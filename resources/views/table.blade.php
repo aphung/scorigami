@@ -1,3 +1,13 @@
+<?php
+function isValid($x, $y) {
+	$invalid = array([1, 0], [1, 1], [2, 1], [3, 1], [4, 1], [5, 1], [7, 1]);
+	
+	if (in_array([$y, $x], $invalid))
+		return false;
+	return true;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -21,13 +31,17 @@
 					<?php
 					for ($x=0; $x <= 73; $x++) { 
 						echo "<tr>";
-						echo "<td class='box invalid'><div style='width:13px;'>";
+						echo "<td class='box'><div style='width:13px;'>";
 						if ($x == 0)
 							echo "0";
 						echo "</div></td>";
 						for ($y=0; $y <= 73; $y++) {
 							if ($y >= $x) {
-								echo "<td class='box'></td>";
+								// Check if valid
+								if (isValid($x, $y))
+									echo "<td class='box id='" . $y . $x . "'></td>";
+								else
+									echo "<td class='box invalid'></td>";
 							} else {
 								echo "<td class='box invalid'>";
 								if ($x - 1 == $y)
@@ -40,6 +54,10 @@
 					?>
 				</tbody>
 			</table>
+
+			@foreach ($games as $game)
+				<li>{{ $game->winner_score }}</li>
+			@endforeach
 		</div>
 	</body>
 </html>

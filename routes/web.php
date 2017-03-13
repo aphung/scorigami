@@ -20,5 +20,6 @@ Route::get('test', function () {
 });
 
 Route::get('table', function () {
-    return view('table');
+    $games = DB::table('games')->get();
+    return view('table', compact('games'));
 });

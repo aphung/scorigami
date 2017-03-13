@@ -1,0 +1,19 @@
+table, td, th {
+	border: 1px solid black;
+	font-size: 13px;
+}
+
+table {
+	height: 10px;
+	border-collapse: collapse;
+}
+
+td {
+	text-align: center;
+}
+
+/* Color */
+.invalid {
+	background-color: black;
+	color: white;
+}

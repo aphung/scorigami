@@ -39,7 +39,7 @@ function isValid($x, $y) {
 							if ($y >= $x) {
 								// Check if valid
 								if (isValid($x, $y))
-									echo "<td class='box id='" . $y . $x . "'></td>";
+									echo "<td class='box' id='" . $y . $x . "'></td>";
 								else
 									echo "<td class='box invalid'></td>";
 							} else {
@@ -54,10 +54,10 @@ function isValid($x, $y) {
 					?>
 				</tbody>
 			</table>
-
-			@foreach ($games as $game)
-				<li>{{ $game->winner_score }}</li>
-			@endforeach
 		</div>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript">var scorigami = <?php echo $grid; ?>;</script>
+		<script type="text/javascript" src="{{ URL::asset('js/scorigami.js') }}"></script>
 	</body>
 </html>

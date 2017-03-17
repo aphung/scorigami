@@ -1,3 +1,24 @@
+/* Header */
+#title {
+	font-size: 3em;
+}
+
+#subtitle {
+	font-size: 1.5em;
+}
+
+
+/* Table */
+
+.axis-label {
+	font-size:2em;
+}
+
+#y-axis {
+	transform: rotate(-90deg);
+	transform-origin: left 25% 0;
+}
+
 table, td, th {
 	/*border: 1px solid black;*/
 	font-size: 13px;

@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $grid = DB::table('grid')->get();
+    return view('scorigami', compact('grid'));
 });
 
 Route::get('test', function () {

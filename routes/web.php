@@ -24,3 +24,8 @@ Route::get('table', function () {
     $grid = DB::table('grid')->get();
     return view('table', compact('grid'));
 });
+
+Route::get('bootstrap', function () {
+	$grid = DB::table('grid')->get();
+	return view('bootstrap', compact('grid'));
+});

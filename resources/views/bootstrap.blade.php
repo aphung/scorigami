@@ -26,8 +26,12 @@ function isValid($x, $y) {
 		<link rel="stylesheet" href="{{ URL::asset('css/table.css') }}">
 	</head>
 	<body>
-		<span id="title">Scorigami&nbsp;</span><span id="subtitle">a word Jon Bois made up</span>
-		<div class="container">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<span id="title">Scorigami&nbsp;</span><span id="subtitle">a word Jon Bois made up</span>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col">
 					links
@@ -39,17 +43,15 @@ function isValid($x, $y) {
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-1">
-					y-axis
-				</div>
 				<div class="col">
-	                <table>
+					<span id="y-axis">y-axis</span>
+	                <table class="table">
 	                    <thead>
 	                        <tr>
 	                        <th></th>
 	                        <?php 
 	                        for ($x=0; $x <= 73; $x++) { 
-	                            echo "<th><div style='width:13px;'>" . $x . "</div></th>";
+	                            echo "<th class='rotate'><div>" . $x . "</div></th>";
 	                        }
 	                        ?>
 	                        </tr>
@@ -87,5 +89,7 @@ function isValid($x, $y) {
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>		
+		<script type="text/javascript">var scorigami = <?php echo $grid; ?>;</script>
+		<script type="text/javascript" src="{{ URL::asset('js/scorigami.js') }}"></script>
 	</body>
 </html>

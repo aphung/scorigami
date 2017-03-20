@@ -34,24 +34,35 @@ td {
 	text-align: center;
 }
 
-tr:hover {
-	background-color: #ffa;
+td, th {
+    position: relative;
 }
 
-td, th {
-  position: relative;
+.table>tbody>tr>td, .table>tbody>tr>th, 
+.table>tfoot>tr>td, .table>tfoot>tr>th, 
+.table>thead>tr>td, .table>thead>tr>th {
+    padding: 0;
+    border-top: none;
 }
-td:hover::after,
-th:hover::after {
-  content: "";
-  position: absolute;
-  background-color: #ffa;
-  left: 0;
-  top: -5000px;
-  height: 10000px;
-  width: 100%;
-  z-index: -1;
+
+/* Rotate Table Headers */
+
+th.rotate {
+    height: 50px;
+    white-space: nowrap;
 }
+
+th.rotate > div {
+    transform: 
+        translate(0px, -9px)
+        rotate(270deg);
+    width: 15px;
+}
+th.rotate > div > span {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
 
 /* Color */
 .invalid {

@@ -26,7 +26,7 @@ function isValid($x, $y) {
 		<link rel="stylesheet" href="{{ URL::asset('css/table.css') }}">
 	</head>
 	<body>
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="col">
 					<span id="title">Scorigami&nbsp;</span><span id="subtitle">a word Jon Bois made up</span>
@@ -44,7 +44,10 @@ function isValid($x, $y) {
 			</div>
 			<div class="row">
 				<div class="col">
-					<span id="y-axis">y-axis</span>
+					<div id="x-axis"><span class="axis-label" id="x-axis-title">Points scored by winner&nbsp;</span><span>(or tyer)</span></div>
+				</div>
+				<div class="col table-content">
+					<div id="y-axis"><span class="axis-label">Points scored by loser&nbsp;</span><span>(or tyer)</div>
 	                <table class="table">
 	                    <thead>
 	                        <tr>

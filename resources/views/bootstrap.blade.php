@@ -29,17 +29,16 @@ function isValid($x, $y) {
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<span id="title">Scorigami&nbsp;</span><span id="subtitle">a word Jon Bois made up</span>
+					<div class="page-header"><h1>Scorigami <small>a word Jon Bois made up</small></h1></div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col">
-					links
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					Selected Content
+					<div class="panel panel-default">
+						<div class="panel-body">
+							Select a scorigami below for more information
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="row">

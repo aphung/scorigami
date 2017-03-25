@@ -21,7 +21,7 @@
 #y-axis {
 	transform-origin: left 25% 0;
     transform: 
-        translate(5px, 420px)
+        translate(0px, 420px)
         rotate(-90deg);
 }
 
@@ -34,8 +34,8 @@ table {
 	border-collapse: collapse;
     display: block;
 	overflow: auto;
-    margin-left: 25px;
-    margin-right: 90%
+    margin-left: 30px;
+    margin-right: 90%;
 }
 
 td {
@@ -62,7 +62,7 @@ th.rotate {
 
 th.rotate > div {
     transform: 
-        translate(0px, -9px)
+        translate(0px, -8px)
         rotate(270deg);
     width: 15px;
 }

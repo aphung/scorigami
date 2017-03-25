@@ -19,7 +19,7 @@ function isValid($x, $y) {
             <div id="x-axis"><span class="axis-label" id="x-axis-title">Points scored by winner&nbsp;</span><span>(or tyer)</span></div>
 
             <div id="table">
-                <div id="y-axis"><span class="axis-label" id="y-axis-title">Points scored by winner&nbsp;</span><span>(or tyer)</span></div>
+                <div id="y-axis"><span class="axis-label" id="y-axis-title">Points scored by loser&nbsp;</span><span>(or tyer)</span></div>
                 <table>
                     <thead>
                         <tr>

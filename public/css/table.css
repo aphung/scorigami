@@ -14,9 +14,15 @@
 	font-size:2em;
 }
 
+#x-axis {
+    transform: translate(45px, 35px)
+}
+
 #y-axis {
-	transform: rotate(-90deg);
 	transform-origin: left 25% 0;
+    transform: 
+        translate(0px, 420px)
+        rotate(-90deg);
 }
 
 table, td, th {
@@ -25,33 +31,46 @@ table, td, th {
 }
 
 table {
-	height: 10px;
 	border-collapse: collapse;
-	overflow: visible;
+    display: block;
+	overflow: auto;
+    margin-left: 30px;
+    margin-right: 90%;
 }
 
 td {
 	text-align: center;
 }
 
-tr:hover {
-	background-color: #ffa;
+td, th {
+    position: relative;
 }
 
-td, th {
-  position: relative;
+.table>tbody>tr>td, .table>tbody>tr>th, 
+.table>tfoot>tr>td, .table>tfoot>tr>th, 
+.table>thead>tr>td, .table>thead>tr>th {
+    padding: 0;
+    border-top: none;
 }
-td:hover::after,
-th:hover::after {
-  content: "";
-  position: absolute;
-  background-color: #ffa;
-  left: 0;
-  top: -5000px;
-  height: 10000px;
-  width: 100%;
-  z-index: -1;
+
+/* Rotate Table Headers */
+
+th.rotate {
+    height: 25px;
+    white-space: nowrap;
 }
+
+th.rotate > div {
+    transform: 
+        translate(0px, -8px)
+        rotate(270deg);
+    width: 15px;
+}
+th.rotate > div > span {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
 
 /* Color */
 .invalid {

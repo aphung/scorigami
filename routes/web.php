@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     $grid = DB::table('grid')->get();
-    return view('scorigami', compact('grid'));
+    return view('bootstrap', compact('grid'));
 });
 
 Route::get('test', function () {
@@ -23,4 +23,9 @@ Route::get('test', function () {
 Route::get('table', function () {
     $grid = DB::table('grid')->get();
     return view('table', compact('grid'));
+});
+
+Route::get('bootstrap', function () {
+	$grid = DB::table('grid')->get();
+	return view('bootstrap', compact('grid'));
 });
